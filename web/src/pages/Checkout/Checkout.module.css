@@ -1,0 +1,46 @@
+.steps { display: flex; align-items: center; justify-content: center; gap: 0; margin-bottom: 40px; }
+.step { display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 600; color: var(--text-muted); }
+.step span { width: 28px; height: 28px; border-radius: var(--radius-full); background: var(--bg-elevated); border: 1px solid var(--border-default); display: flex; align-items: center; justify-content: center; font-size: 13px; }
+.step.active { color: var(--brand-amber); }
+.step.active span { background: var(--brand-amber); color: var(--text-inverse); border-color: var(--brand-amber); }
+.stepLine { width: 60px; height: 1px; background: var(--border-default); margin: 0 12px; }
+
+.layout { display: grid; grid-template-columns: 1fr 360px; gap: 32px; align-items: flex-start; }
+.main h2 { font-size: 18px; margin-bottom: 16px; }
+
+.addressGrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+.addressCard { position: relative; padding: 16px; border-radius: var(--radius-lg); background: var(--bg-card); border: 2px solid var(--border-subtle); cursor: pointer; transition: all var(--duration-fast); display: flex; flex-direction: column; gap: 4px; }
+.addressCard:hover { border-color: var(--border-strong); }
+.addressCard.selectedAddr { border-color: var(--brand-amber); background: var(--brand-amber-glow); }
+.addrLabel { font-size: 11px; font-weight: 700; text-transform: uppercase; color: var(--brand-amber); }
+.addressCard strong { font-size: 15px; }
+.addressCard p { font-size: 13px; color: var(--text-secondary); margin: 0; }
+.checkmark { position: absolute; top: 12px; right: 12px; width: 24px; height: 24px; border-radius: var(--radius-full); background: var(--brand-amber); color: var(--text-inverse); display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 700; }
+
+.addAddrBtn { margin-top: 12px; padding: 10px 20px; border-radius: var(--radius-md); border: 1px dashed var(--border-default); font-size: 14px; font-weight: 600; color: var(--text-muted); transition: all var(--duration-fast); width: 100%; }
+.addAddrBtn:hover { border-color: var(--brand-amber); color: var(--brand-amber); }
+
+.addressForm { display: flex; flex-direction: column; gap: 12px; margin-top: 16px; padding: 20px; border-radius: var(--radius-lg); background: var(--bg-card); border: 1px solid var(--border-subtle); }
+.formRow { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }
+.inputGroup { display: flex; flex-direction: column; gap: 4px; }
+.inputGroup label { font-size: 12px; font-weight: 600; color: var(--text-muted); }
+.input { padding: 10px 14px; border-radius: var(--radius-md); border: 1px solid var(--border-default); background: var(--bg-tertiary); color: var(--text-primary); font-size: 14px; outline: none; }
+.input:focus { border-color: var(--brand-amber); }
+.saveBtn { padding: 12px; border-radius: var(--radius-md); font-weight: 700; background: var(--brand-green); color: var(--text-inverse); width: fit-content; }
+
+.deliveryOptions { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.deliveryCard { padding: 16px; border-radius: var(--radius-lg); background: var(--bg-card); border: 2px solid var(--border-subtle); cursor: pointer; transition: all var(--duration-fast); display: flex; flex-direction: column; gap: 4px; }
+.deliveryCard:hover { border-color: var(--border-strong); }
+.deliveryCard.selectedDelivery { border-color: var(--brand-amber); background: var(--brand-amber-glow); }
+.deliveryCard strong { font-size: 15px; }
+.deliveryCard span { font-size: 13px; color: var(--text-muted); }
+
+.summary { position: sticky; top: 84px; }
+.summaryCard { padding: 24px; border-radius: var(--radius-xl); background: var(--bg-card); border: 1px solid var(--border-subtle); }
+.summaryCard h3 { margin: 0 0 16px; }
+.summaryRow { display: flex; justify-content: space-between; padding: 8px 0; font-size: 14px; color: var(--text-secondary); }
+.totalRow { font-size: 18px; font-weight: 800; color: var(--text-primary); border-top: 2px solid var(--border-default); padding-top: 12px; margin-top: 8px; }
+.continueBtn { width: 100%; padding: 14px; border-radius: var(--radius-md); font-weight: 700; font-size: 15px; background: linear-gradient(135deg, var(--brand-amber), var(--brand-amber-dark)); color: var(--text-inverse); box-shadow: var(--shadow-glow-amber); transition: all var(--duration-normal); margin-top: 20px; }
+.continueBtn:hover { transform: translateY(-1px); }
+
+@media (max-width: 960px) { .layout { grid-template-columns: 1fr; } .summary { position: static; } .addressGrid { grid-template-columns: 1fr; } }

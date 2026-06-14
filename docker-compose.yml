@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:8
+    container_name: pickels_db
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: secret_root_password
+      MYSQL_DATABASE: shanti_pickles
+    volumes:
+      - mysql_data:/var/lib/mysql
+      # Uncomment the following line if you want to initialize the DB with a dump file on the first run
+      # - ./server/dump.sql:/docker-entrypoint-initdb.d/dump.sql
+    ports:
+      - "3306:3306"
+
+  server:
+    build: ./server
+    container_name: pickels_server
+    restart: unless-stopped
+    environment:
+      - PORT=5000
+      - DB_HOST=db
+      - DB_USER=root
+      - DB_PASSWORD=secret_root_password
+      - DB_NAME=shanti_pickles
+      - JWT_SECRET=super_secret_jwt_key_12345
+      - NODE_ENV=production
+    ports:
+      - "5000:5000"
+    depends_on:
+      - db
+
+  web:
+    build: ./web
+    container_name: pickels_web
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    depends_on:
+      - server
+
+volumes:
+  mysql_data:

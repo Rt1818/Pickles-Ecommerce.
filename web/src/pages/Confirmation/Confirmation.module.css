@@ -1,0 +1,19 @@
+.card { max-width: 560px; margin: 0 auto; text-align: center; padding: 60px 40px; border-radius: var(--radius-2xl); background: var(--bg-card); border: 1px solid var(--border-subtle); }
+.checkCircle { width: 80px; height: 80px; border-radius: var(--radius-full); background: linear-gradient(135deg, var(--brand-green), var(--brand-green-dark)); display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; box-shadow: var(--shadow-glow-green); }
+.checkCircle svg { color: white; }
+.card h1 { font-size: 28px; margin-bottom: 8px; }
+.subtitle { font-size: 15px; color: var(--text-muted); }
+
+.orderDetails { margin: 32px 0; padding: 20px; border-radius: var(--radius-lg); background: var(--bg-glass-light); border: 1px solid var(--border-subtle); }
+.detailRow { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid var(--border-subtle); font-size: 14px; }
+.detailRow:last-child { border-bottom: none; }
+.detailRow span { color: var(--text-muted); }
+.detailRow strong { color: var(--text-primary); }
+
+.actions { display: flex; flex-direction: column; gap: 10px; }
+.trackBtn { padding: 14px; border-radius: var(--radius-md); font-weight: 700; background: linear-gradient(135deg, var(--brand-amber), var(--brand-amber-dark)); color: var(--text-inverse); box-shadow: var(--shadow-glow-amber); transition: all var(--duration-normal); }
+.trackBtn:hover { transform: translateY(-1px); }
+.ordersBtn { padding: 14px; border-radius: var(--radius-md); font-weight: 700; background: var(--bg-elevated); border: 1px solid var(--border-default); color: var(--text-primary); transition: all var(--duration-fast); }
+.ordersBtn:hover { background: var(--bg-tertiary); }
+.shopBtn { padding: 10px; font-size: 14px; color: var(--text-muted); transition: color var(--duration-fast); }
+.shopBtn:hover { color: var(--brand-amber); }

@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shanti Pickles &amp; Foods — Homemade Pickles, Snacks &amp; More</title>
+  <meta name="description" content="Shanti Pickles &amp; Foods — Authentic homemade pickles and snacks. Pure ingredients, traditional taste, delivered to your door." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Ccircle cx='128' cy='128' r='120' fill='%23f59e0b'/%3E%3Cpath d='M88 152c24 18 56 18 80 0' stroke='%23fff' stroke-width='16' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='92' cy='112' r='10' fill='%23fff'/%3E%3Ccircle cx='164' cy='112' r='10' fill='%23fff'/%3E%3C/svg%3E" />
+  <meta property="og:title" content="Shanti Pickles &amp; Foods" />
+  <meta property="og:description" content="Authentic homemade pickles &amp; snacks. Pure. Homely. Peaceful." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1625944529227-18e403d315f0?q=80&w=1200&auto=format&fit=crop" />
+  <style>
+    :root{
+      --bg:#0b0f14; --card:#0f141b; --muted:#93a1b3; --text:#e8ecf1; --brand:#22c55e; --brand-2:#f59e0b; --ring:#2dd4bf;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Inter,Arial,sans-serif;background:var(--bg);color:var(--text);}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1120px;margin-inline:auto;padding:0 20px}
+    header{position:sticky;top:0;background:rgba(11,15,20,.7);backdrop-filter:saturate(140%) blur(8px);z-index:40;border-bottom:1px solid #1b2430}
+    .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+    .brand{display:flex;gap:10px;align-items:center;font-weight:800;letter-spacing:.2px}
+    .brand .logo{width:32px;height:32px;border-radius:8px;background:conic-gradient(from 0deg, var(--brand), var(--brand-2));box-shadow:0 4px 16px rgba(34,197,94,.35)}
+    nav ul{display:flex;gap:20px;list-style:none;margin:0;padding:0}
+    nav a{padding:8px 12px;border-radius:10px}
+    nav a:hover{background:#121825}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 16px;border-radius:14px;font-weight:700;border:1px solid #223049;background:linear-gradient(180deg,#182132,#111827);box-shadow:var(--shadow)}
+    .btn.primary{border-color:transparent;background:linear-gradient(180deg,var(--brand),#16a34a);color:#07110a}
+    .btn.badge{padding:6px 10px;border-radius:999px;font-size:12px;background:#122b1b;border:1px solid #1c6b3d;color:#a7f3d0}
+    .hero{position:relative;isolation:isolate;padding:96px 0 48px;overflow:hidden}
+    .hero:before{content:"";position:absolute;inset:-20%;background:radial-gradient(600px 300px at 10% 10%, rgba(34,197,94,.25), transparent 70%),radial-gradient(600px 300px at 90% 20%, rgba(245,158,11,.25), transparent 70%);z-index:-1;}
+    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:32px;align-items:center}
+    @media (max-width:960px){.hero-grid{grid-template-columns:1fr}.hide-sm{display:none}}
+    h1{font-size:clamp(36px,4vw,56px);line-height:1.05;margin:8px 0 6px}
+    .lead{color:#cdd6e3;font-size:clamp(16px,1.7vw,19px);max-width:60ch}
+    .pill{display:inline-flex;gap:8px;align-items:center;margin-bottom:12px}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}
+    .stat{background:rgba(255,255,255,.03);border:1px solid #1b2430;border-radius:16px;padding:14px 16px;text-align:center}
+    .hero-media{position:relative;border-radius:22px;overflow:hidden;border:1px solid #213047;box-shadow:var(--shadow)}
+    .hero-media img{width:100%;height:100%;object-fit:cover;display:block}
+    section{padding:64px 0;border-top:1px solid #121721}
+    .section-title{display:flex;justify-content:space-between;align-items:end;margin-bottom:22px}
+    .section-title h2{font-size:clamp(24px,3.3vw,36px);margin:0}
+    .grid{display:grid;gap:16px}
+    .grid.cols-3{grid-template-columns:repeat(3,1fr)}
+    .grid.cols-2{grid-template-columns:repeat(2,1fr)}
+    @media (max-width:900px){.grid.cols-3{grid-template-columns:1fr 1fr}}
+    @media (max-width:640px){.grid.cols-3,.grid.cols-2{grid-template-columns:1fr}}
+    .card{background:var(--card);border:1px solid #1b2430;border-radius:18px;padding:16px;box-shadow:var(--shadow)}
+    .card .badge{font-size:12px;background:#2a1f0a;border:1px solid #6b4006;color:#ffecb3;padding:4px 8px;border-radius:999px}
+    .product{display:flex;flex-direction:column;gap:10px}
+    .product img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:14px;border:1px solid #223049}
+    .product .meta{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .price{font-weight:800}
+    .chip{font-size:12px;padding:6px 8px;border-radius:999px;border:1px solid #27354b;background:#0f1729;color:#cbe0ff}
+    .features{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+    @media (max-width:960px){.features{grid-template-columns:repeat(2,1fr)}}
+    .feature{background:rgba(255,255,255,.03);border:1px solid #1b2430;border-radius:16px;padding:16px}
+    .feature h3{margin:6px 0 0;font-size:16px}
+    .flex{display:flex;gap:10px;align-items:center}
+    .reviews .quote{font-style:italic;color:#cdd6e3}
+    .faq details{background:rgba(255,255,255,.03);border:1px solid #1b2430;border-radius:14px;padding:12px}
+    .faq summary{cursor:pointer;font-weight:700}
+    footer{padding:28px 0;border-top:1px solid #121721;color:#9fb0c7}
+    .float-wa{position:fixed;right:18px;bottom:18px;z-index:50}
+    .float-wa a{display:inline-flex;align-items:center;gap:10px;background:#1a4738;border:1px solid #2dd4bf;padding:12px 14px;border-radius:999px;color:#d1fae5;box-shadow:var(--shadow)}
+    .kicker{font-size:13px;color:#a7f3d0}
+    .telugu{font-weight:700}
+    .badge-row{display:flex;gap:8px;flex-wrap:wrap}
+    .contact form{display:grid;gap:10px}
+    .contact input,.contact select,.contact textarea{width:100%;padding:12px;border-radius:12px;border:1px solid #27354b;background:#0f1729;color:#e8ecf1}
+    .contact label{font-size:14px;color:#bcc9da}
+    .note{font-size:12px;color:#9fb0c7}
+    .mono{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container nav">
+      <div class="brand"><span class="logo"></span> <span>Shanti Pickles &amp; Foods</span></div>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a class="btn" href="#contact">Order</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="pill btn badge" aria-label="badge">100% Homemade • Preservative‑Free</div>
+        <h1>Pure. Homely. <span style="color:var(--brand)">Peaceful.</span></h1>
+        <p class="lead">Authentic Telugu <span class="telugu">పచ్చళ్లు</span> (pickles) and snacks crafted with hand‑picked ingredients. <strong>Mana inti ruchulu, mee intiki</strong> — మన ఇంటి రుచులు, మీ ఇంటికి.</p>
+        <div class="badge-row" style="margin:16px 0 10px">
+          <span class="chip">Sun‑cured</span>
+          <span class="chip">Cold‑pressed oils</span>
+          <span class="chip">Farm‑fresh spices</span>
+          <span class="chip">Pan‑India shipping</span>
+        </div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:8px">
+          <a class="btn primary" href="#products">Shop Bestsellers</a>
+          <a class="btn" href="#contact">Order on WhatsApp</a>
+        </div>
+        <div class="stats">
+          <div class="stat"><div class="kicker">⭐ Ratings</div><div style="font-size:22px;font-weight:800">4.9/5</div></div>
+          <div class="stat"><div class="kicker">👨‍🍳 Batches</div><div style="font-size:22px;font-weight:800">Small‑batch</div></div>
+          <div class="stat"><div class="kicker">🚚 Dispatch</div><div style="font-size:22px;font-weight:800">24–48 hrs</div></div>
+        </div>
+      </div>
+      <div class="hero-media hide-sm" aria-hidden="true">
+        <img alt="Assorted Telugu pickles and snacks on a rustic table" src="https://images.unsplash.com/photo-1617093727343-cfb4c1fb4c39?q=80&w=1200&auto=format&fit=crop"/>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section>
+    <div class="container">
+      <div class="features">
+        <div class="feature"><div class="flex"><span>🥄</span><h3>No added colors</h3></div><p class="note">Only turmeric, chilli &amp; natural spices for rich color.</p></div>
+        <div class="feature"><div class="flex"><span>🪔</span><h3>Traditional methods</h3></div><p class="note">Sun‑curing, stone‑ground masalas, copper &amp; clay vessels.</p></div>
+        <div class="feature"><div class="flex"><span>🫙</span><h3>Food‑grade packing</h3></div><p class="note">Tamper‑evident jars &amp; leak‑proof pouches.</p></div>
+        <div class="feature"><div class="flex"><span>🧾</span><h3>FSSAI coming soon</h3></div><p class="note">We follow hygiene SOPs while licensing is in progress.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section id="products">
+    <div class="container">
+      <div class="section-title">
+        <h2>Our Bestsellers <span class="telugu">— పాపులర్ ఐటంస్</span></h2>
+        <a class="btn" href="#contact">Bulk / Custom Orders</a>
+      </div>
+      <div class="grid cols-3">
+        <!-- Product Card Template -->
+        <article class="card product">
+          <img src="https://images.unsplash.com/photo-1598514982274-04188c1cc6e9?q=80&w=1200&auto=format&fit=crop" alt="Avakaya Mango Pickle"/>
+          <div class="meta">
+            <h3 style="margin:0">Avakaya (ఆవకాయ)</h3>
+            <span class="badge">Spicy • Guntur chilli</span>
+          </div>
+          <div class="meta">
+            <span class="price">₹249 / 250g</span>
+            <span class="chip">No vinegar</span>
+          </div>
+          <button class="btn" onclick="quickOrder('Avakaya (ఆవకాయ)', '250g', '249')">Quick Order</button>
+        </article>
+
+        <article class="card product">
+          <img src="https://images.unsplash.com/photo-1625944660394-dc673e89fb0a?q=80&w=1200&auto=format&fit=crop" alt="Gongura Pickle"/>
+          <div class="meta">
+            <h3 style="margin:0">Gongura (గొంగూర)</h3>
+            <span class="badge">Andhra classic</span>
+          </div>
+          <div class="meta">
+            <span class="price">₹269 / 250g</span>
+            <span class="chip">Cold‑pressed oil</span>
+          </div>
+          <button class="btn" onclick="quickOrder('Gongura (గొంగూర)', '250g', '269')">Quick Order</button>
+        </article>
+
+        <article class="card product">
+          <img src="https://images.unsplash.com/photo-1526312426976-593c23246d3b?q=80&w=1200&auto=format&fit=crop" alt="Lemon Pickle"/>
+          <div class="meta">
+            <h3 style="margin:0">Lemon (నిమ్మకాయ)</h3>
+            <span class="badge">Tangy &amp; zesty</span>
+          </div>
+          <div class="meta">
+            <span class="price">₹239 / 250g</span>
+            <span class="chip">Sun‑cured</span>
+          </div>
+          <button class="btn" onclick="quickOrder('Lemon (నిమ్మకాయ)', '250g', '239')">Quick Order</button>
+        </article>
+
+        <article class="card product">
+          <img src="https://images.unsplash.com/photo-1604909052743-89c7a4b5f6f0?q=80&w=1200&auto=format&fit=crop" alt="Tomato Pickle"/>
+          <div class="meta">
+            <h3 style="margin:0">Tomato (టమాట)</h3>
+            <span class="badge">Family favorite</span>
+          </div>
+          <div class="meta">
+            <span class="price">₹229 / 250g</span>
+            <span class="chip">Garlic option</span>
+          </div>
+          <button class="btn" onclick="quickOrder('Tomato (టమాట)', '250g', '229')">Quick Order</button>
+        </article>
+
+        <article class="card product">
+          <img src="https://images.unsplash.com/photo-1625945044303-ec8b0f0f7584?q=80&w=1200&auto=format&fit=crop" alt="Mixture Namkeen"/>
+          <div class="meta">
+            <h3 style="margin:0">Andhra Mixture</h3>
+            <span class="badge">Crispy snack</span>
+          </div>
+          <div class="meta">
+            <span class="price">₹199 / 250g</span>
+            <span class="chip">Made fresh</span>
+          </div>
+          <button class="btn" onclick="quickOrder('Andhra Mixture', '250g', '199')">Quick Order</button>
+        </article>
+
+        <article class="card product">
+          <img src="https://images.unsplash.com/photo-1625944526833-d5515fb3181a?q=80&w=1200&auto=format&fit=crop" alt="Murukku Snack"/>
+          <div class="meta">
+            <h3 style="margin:0">Murukku / Chakli</h3>
+            <span class="badge">Tea‑time bestie</span>
+          </div>
+          <div class="meta">
+            <span class="price">₹189 / 200g</span>
+            <span class="chip">Crisp &amp; light</span>
+          </div>
+          <button class="btn" onclick="quickOrder('Murukku / Chakli', '200g', '189')">Quick Order</button>
+        </article>
+      </div>
+      <p class="note" style="margin-top:10px">All prices are indicative. GST &amp; shipping extra as applicable. Custom spice levels available on request.</p>
+    </div>
+  </section>
+
+  <!-- About / Story -->
+  <section id="about">
+    <div class="container grid cols-2">
+      <div>
+        <div class="section-title"><h2>Our Story <span class="telugu">— మా కథ</span></h2></div>
+        <p>Shanti Pickles &amp; Foods was started with a simple goal — to bring <strong>grandma‑style flavors</strong> back to every plate. We use <em>cold‑pressed oils</em>, <em>stone‑ground spices</em> and <em>time‑tested recipes</em>, ensuring taste and health go hand‑in‑hand.</p>
+        <ul class="note">
+          <li>Made fresh weekly in small batches</li>
+          <li>Hygienic kitchen, SOP‑driven process</li>
+          <li>Pan‑India shipping with careful packaging</li>
+        </ul>
+        <div style="margin-top:14px"><a class="btn" href="#faq">See FAQs</a></div>
+      </div>
+      <div class="card">
+        <h3 style="margin-top:0">Ingredient Promise</h3>
+        <p class="note">Every jar lists exact ingredients. No shortcuts, no premixes.</p>
+        <ul>
+          <li>Guntur &amp; Byadgi chillies</li>
+          <li>Cold‑pressed sesame/groundnut oil</li>
+          <li>Rock salt &amp; jaggery (where needed)</li>
+          <li>Zero synthetic preservatives</li>
+        </ul>
+        <div class="badge-row"><span class="chip">Vegetarian</span><span class="chip">Hygienic</span><span class="chip">Handmade</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section id="reviews" class="reviews">
+    <div class="container">
+      <div class="section-title"><h2>What Customers Say</h2></div>
+      <div class="grid cols-3">
+        <div class="card"><div class="quote">“The <strong>Gongura</strong> hit the perfect sour‑spicy balance. Tastes just like my nani’s!”</div><div class="note">— Ananya, Bengaluru</div></div>
+        <div class="card"><div class="quote">“Super fresh, well packed. The <strong>Avakaya</strong> has that authentic kick without being oily.”</div><div class="note">— Karthik, Hyderabad</div></div>
+        <div class="card"><div class="quote">“Crispy snacks and quick dispatch. Will reorder for the festive season.”</div><div class="note">— Shreya, Pune</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="faq">
+    <div class="container">
+      <div class="section-title"><h2>FAQ</h2></div>
+      <div class="grid cols-2">
+        <details class="card" open>
+          <summary>How do I place an order?</summary>
+          <p>Use the <a href="#contact">Order Form</a> or click <em>Quick Order</em> on any product to send us a WhatsApp with your selections.</p>
+        </details>
+        <details class="card">
+          <summary>Do you ship across India?</summary>
+          <p>Yes. We pack in leak‑proof jars/pouches with shock protection. Shipping charges vary by destination &amp; weight.</p>
+        </details>
+        <details class="card">
+          <summary>How long do pickles last?</summary>
+          <p>Properly stored pickles last 6–12 months. Always use a <em>dry spoon</em> and keep the jar tightly closed.</p>
+        </details>
+        <details class="card">
+          <summary>Spice levels?</summary>
+          <p>Mild/Medium/Hot options are available. Mention your preference while ordering.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact / Order -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="section-title"><h2>Order Now <span class="telugu">— ఆర్డర్ పెట్టండి</span></h2></div>
+      <div class="grid cols-2">
+        <div class="card">
+          <form id="orderForm" onsubmit="return sendWA(event)">
+            <div>
+              <label for="name">Your Name</label>
+              <input id="name" name="name" placeholder="e.g., Robin" required />
+            </div>
+            <div class="grid cols-2">
+              <div>
+                <label for="phone">Phone</label>
+                <input id="phone" name="phone" placeholder="10‑digit number" pattern="[0-9]{10}" required />
+              </div>
+              <div>
+                <label for="city">City</label>
+                <input id="city" name="city" placeholder="Hyderabad" />
+              </div>
+            </div>
+            <div class="grid cols-2">
+              <div>
+                <label for="product">Product</label>
+                <select id="product" name="product" required>
+                  <option value="Avakaya (ఆవకాయ)">Avakaya (ఆవకాయ)</option>
+                  <option value="Gongura (గొంగూర)">Gongura (గొంగూర)</option>
+                  <option value="Lemon (నిమ్మకాయ)">Lemon (నిమ్మకాయ)</option>
+                  <option value="Tomato (టమాట)">Tomato (టమాట)</option>
+                  <option value="Andhra Mixture">Andhra Mixture</option>
+                  <option value="Murukku / Chakli">Murukku / Chakli</option>
+                </select>
+              </div>
+              <div>
+                <label for="qty">Quantity</label>
+                <select id="qty" name="qty">
+                  <option>1</option><option>2</option><option>3</option><option>5</option>
+                </select>
+              </div>
+            </div>
+            <div>
+              <label for="size">Pack Size</label>
+              <select id="size" name="size">
+                <option>250g</option>
+                <option>500g</option>
+                <option>1kg</option>
+              </select>
+            </div>
+            <div>
+              <label for="notes">Notes (spice level, no garlic, etc.)</label>
+              <textarea id="notes" name="notes" rows="3"></textarea>
+            </div>
+            <button class="btn primary" type="submit">Send on WhatsApp</button>
+            <p class="note">We’ll confirm price &amp; shipping and share the payment link (UPI / GPay).</p>
+          </form>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0">Contact</h3>
+          <p class="note">Have a custom request or bulk order for events/corporates? Ping us.</p>
+          <ul>
+            <li>📞 <a href="tel:+910000000000">+91 00000 00000</a> (update this)</li>
+            <li>✉️ <a href="mailto:hello@shantifoods.example">hello@shantifoods.example</a> (update this)</li>
+            <li>📍 Hyderabad, Telangana</li>
+          </ul>
+          <div class="badge-row" style="margin-top:10px">
+            <span class="chip">Weekly dispatch</span>
+            <span class="chip">Gift packs</span>
+            <span class="chip">Festival specials</span>
+          </div>
+          <div style="margin-top:14px">
+            <a class="btn" href="#products">View Products</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap">
+      <div>© <span id="year"></span> Shanti Pickles &amp; Foods. All rights reserved.</div>
+      <div class="note">Made with love in Telangana • <span class="mono">#PureHomelyPeaceful</span></div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <div class="float-wa">
+    <a id="waFloating" href="https://wa.me/910000000000?text=Hi%20Shanti%20Foods%2C%20I%27d%20like%20to%20order!" target="_blank" rel="noopener">💬 WhatsApp Order</a>
+  </div>
+
+  <script>
+    // Smooth hash links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href')); if(t){e.preventDefault(); t.scrollIntoView({behavior:'smooth'});} });
+    });
+
+    // Dynamic year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Replace with your real WhatsApp number (include country code, no +)
+    const WA_NUMBER = '8499944709'; // TODO: update
+
+    function quickOrder(product, size, price){
+      const msg = encodeURIComponent(`Quick Order:%0AProduct: ${product}%0ASize: ${size}%0APrice: ₹${price}%0AName: ______%0ACity: ______%0ASpice: Mild/Medium/Hot`);
+      window.open(`https://wa.me/${WA_NUMBER}?text=${msg}`,'_blank');
+    }
+
+    function sendWA(e){
+      e.preventDefault();
+      const f = e.target;
+      const name = f.name.value.trim();
+      const phone = f.phone.value.trim();
+      const city = f.city.value.trim();
+      const product = f.product.value;
+      const qty = f.qty.value;
+      const size = f.size.value;
+      const notes = f.notes.value.trim();
+      const message = encodeURIComponent(
+        `New Order:%0AName: ${name}%0APhone: ${phone}%0ACity: ${city}%0AItem: ${product}%0AQty: ${qty}%0APack: ${size}%0ANotes: ${notes || '-'}%0A`
+      );
+      window.open(`https://wa.me/${WA_NUMBER}?text=${message}`, '_blank');
+      return false;
+    }
+
+    // Keep floating WA button synced
+    document.getElementById('waFloating').href = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent('Hi Shanti Foods, I\'d like to order!')}`;
+  </script>
+</body>
+</html>

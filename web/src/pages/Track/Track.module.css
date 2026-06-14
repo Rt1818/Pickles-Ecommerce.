@@ -1,0 +1,48 @@
+.backLink { font-size: 13px; color: var(--text-muted); display: inline-block; margin-bottom: 16px; }
+.backLink:hover { color: var(--brand-amber); }
+h1 { margin-bottom: 32px; }
+.orderNum { color: var(--brand-amber); font-size: 0.7em; }
+
+.layout { display: grid; grid-template-columns: 1fr 380px; gap: 32px; align-items: flex-start; }
+
+/* ── Timeline ── */
+.timeline { position: relative; padding: 0; margin-bottom: 32px; }
+.timelineStep { display: flex; align-items: flex-start; gap: 16px; position: relative; padding-bottom: 32px; }
+.timelineStep:last-child { padding-bottom: 0; }
+.timelineDot { width: 40px; height: 40px; border-radius: var(--radius-full); background: var(--bg-elevated); border: 2px solid var(--border-default); display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0; z-index: 1; transition: all var(--duration-normal); }
+.timelineStep.completed .timelineDot { background: var(--brand-green); border-color: var(--brand-green); color: white; font-size: 14px; }
+.timelineStep.current .timelineDot { background: var(--brand-amber); border-color: var(--brand-amber); color: var(--text-inverse); box-shadow: var(--shadow-glow-amber); }
+.timelineContent strong { font-size: 15px; display: block; margin-top: 8px; }
+.timelineContent { color: var(--text-muted); }
+.timelineStep.completed .timelineContent, .timelineStep.current .timelineContent { color: var(--text-primary); }
+.currentLabel { font-size: 12px; font-weight: 600; color: var(--brand-amber); display: block; margin-top: 2px; }
+.timelineLine { position: absolute; left: 19px; top: 44px; width: 2px; bottom: 0; background: var(--border-default); }
+.completedLine { background: var(--brand-green); }
+
+/* ── Map ── */
+.mapPlaceholder { padding: 48px; border-radius: var(--radius-xl); background: var(--bg-card); border: 1px solid var(--border-subtle); text-align: center; }
+.mapIcon { font-size: 48px; margin-bottom: 16px; }
+.mapPlaceholder h3 { margin-bottom: 8px; }
+.mapPlaceholder p { color: var(--text-muted); font-size: 14px; }
+.deliverTo { color: var(--text-secondary) !important; margin-top: 12px !important; font-weight: 600; }
+
+/* ── Sidebar ── */
+.sidebar { position: sticky; top: 84px; display: flex; flex-direction: column; gap: 16px; }
+.detailCard, .itemsCard { padding: 20px; border-radius: var(--radius-lg); background: var(--bg-card); border: 1px solid var(--border-subtle); }
+.detailCard h3, .itemsCard h3 { margin: 0 0 16px; font-size: 16px; }
+.detailRow { display: flex; justify-content: space-between; padding: 8px 0; font-size: 13px; border-bottom: 1px solid var(--border-subtle); }
+.detailRow:last-child { border-bottom: none; }
+.detailRow span { color: var(--text-muted); }
+.detailRow strong { color: var(--text-primary); font-size: 13px; }
+.totalRow { margin-top: 8px; padding-top: 12px; border-top: 2px solid var(--border-default); }
+.totalRow strong { font-size: 18px !important; color: var(--brand-green-light) !important; }
+
+.itemRow { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--border-subtle); }
+.itemRow:last-child { border-bottom: none; }
+.itemImg { width: 48px; height: 48px; border-radius: var(--radius-sm); object-fit: cover; border: 1px solid var(--border-subtle); }
+.itemRow div { flex: 1; }
+.itemRow strong { font-size: 13px; display: block; }
+.itemRow div span { font-size: 12px; color: var(--text-muted); }
+.itemRow > span { font-weight: 700; font-size: 14px; color: var(--brand-green-light); }
+
+@media (max-width: 960px) { .layout { grid-template-columns: 1fr; } .sidebar { position: static; } }
