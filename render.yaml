@@ -30,9 +30,8 @@ services:
         value: https://pickles-frontend.onrender.com
 
   # 💻 Frontend React Static Site
-  - type: web
+  - type: static
     name: pickles-frontend
-    env: static
     rootDir: web
     buildCommand: npm run build
     staticPublishDir: dist
