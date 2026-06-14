@@ -1,7 +1,7 @@
 services:
   # 🫙 Backend API Web Service
   - type: web
-    name: pickles-backend
+    name: pickles-backend-rt1818
     runtime: node
     rootDir: server
     buildCommand: npm install
@@ -27,11 +27,11 @@ services:
       - key: MYSQL_SSL
         value: "true"
       - key: CLIENT_URL
-        value: https://pickles-frontend.onrender.com
+        value: https://pickles-frontend-rt1818.onrender.com
 
   # 💻 Frontend React Static Site
   - type: web
-    name: pickles-frontend
+    name: pickles-frontend-rt1818
     runtime: static
     rootDir: web
     buildCommand: npm run build
@@ -39,7 +39,5 @@ services:
     plan: free
     envVars:
       - key: VITE_API_URL
-        fromService:
-          type: web
-          name: pickles-backend
-          property: url
+        value: https://pickles-backend-rt1818.onrender.com/api
+
