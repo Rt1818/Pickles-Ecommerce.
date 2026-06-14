@@ -1,5 +1,4 @@
 -- Shanti Pickles & Foods — Seed Data
-USE shanti_pickles;
 
 -- ============================================
 -- CATEGORIES
