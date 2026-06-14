@@ -36,7 +36,6 @@ services:
     rootDir: web
     buildCommand: npm run build
     staticPublishPath: dist
-    plan: free
     envVars:
       - key: VITE_API_URL
         value: https://pickles-backend-rt1818.onrender.com/api
